@@ -11,6 +11,10 @@ string reverse(string str) {
     int s = 0;
     int e = str.length()-1;
     int count = 0;
+    if(!isdigit(str[0])) {   // check for the is number
+        cout << "0";
+        return "";
+    }
 
     if(str[0] == '-') {
         while(s < e) {
@@ -26,12 +30,6 @@ string reverse(string str) {
     }
     return str;
     }
-
-    if(!isdigit(str[0])) {   // check for the is number
-        cout << "0";
-        return "";
-    }
-
 
 
     // method 1
